@@ -1,0 +1,6 @@
+@import url(./__text/author__content__text.css);
+@import url(./__title/author__content__title.css);
+
+.author__content {
+    margin-left: 56px; 
+}

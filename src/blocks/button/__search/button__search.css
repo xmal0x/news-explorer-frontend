@@ -1,0 +1,25 @@
+.button__search {
+    position: absolute;
+    border: none;
+    right: 0px;
+    height: 66px;
+    width: 168px;
+    background: #2F71E5;
+    border-radius: 50px;
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.button__search:hover {
+    background: #347EFF;
+    cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.button__search:active {
+    background: #2A65CC;
+    cursor: url(../../../images/Pointer.png), pointer;
+}

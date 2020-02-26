@@ -1,0 +1,12 @@
+.header__auth-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 13px 20px;
+    border-radius: 26px;
+    cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.header__auth-control_black {
+    border: 1px solid #000;
+}

@@ -1,0 +1,12 @@
+@import url(./__description/main-content__description.css);
+@import url(./__search/main-content__search.css);
+@import url(./__title/main-content__title.css);
+@import url(./__content/main-content__content.css);
+@import url(./__saved/main-content__saved.css);
+
+.main-content {
+    height: 496px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

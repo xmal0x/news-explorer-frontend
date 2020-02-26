@@ -1,0 +1,23 @@
+@import url(./_active/header__item_active.css);
+@import url(./__auth/header__item__auth.css);
+
+.header__item {
+    padding-right: 32px;
+    align-self: center;
+
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__item_black {
+    color: #000;
+}
+
+.header__item_auth {
+    padding-right: 10px; 
+}

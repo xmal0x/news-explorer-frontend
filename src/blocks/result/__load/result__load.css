@@ -1,0 +1,10 @@
+@import url(./__text/result__load__text.css);
+@import url(./__spinner/result__load__spinner.css);
+
+.result__load {
+    height: 282px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

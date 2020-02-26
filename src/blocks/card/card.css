@@ -1,0 +1,17 @@
+@import url(./__date/card__date.css);
+@import url(./__favorite/card__favorite.css);
+@import url(./__image/card__image.css);
+@import url(./__source/card__source.css);
+@import url(./__text/card__text.css);
+@import url(./__title/card__title.css);
+@import url(./__content/card__content.css);
+@import url(./__saved/card__saved.css);
+
+.card {
+    width: 400px;
+    height: 576px;
+    background: #fff; 
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+}

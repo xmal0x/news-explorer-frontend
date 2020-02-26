@@ -1,0 +1,7 @@
+@import url(./__icon/footer__menu__icon.css);
+@import url(./__link/footer__menu__link.css);
+
+.footer__menu {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,13 @@
+@import url(./__section/root__section.css);
+
+.root {
+    max-width: 1440px;    
+    margin: 0px auto;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    cursor: url(../../images/Pointer.png), pointer;
+}

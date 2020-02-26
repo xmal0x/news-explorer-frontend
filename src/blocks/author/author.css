@@ -1,0 +1,9 @@
+@import url(./__avatar/author__avatar.css);
+@import url(./__content/author__content.css);
+
+.author {
+    height: 624px;
+    display: flex;
+    align-items: flex-start;
+    margin: 0px 104px;
+}

@@ -1,0 +1,21 @@
+.button__show-more {
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    width: 288px;
+    height: 64px;
+    border: none;
+    background: #fff;
+    margin: 0px auto 80px;
+    display: flex;
+    justify-content: center;
+    border-radius: 80px;
+}
+
+.button__show-more:hover {
+    opacity: 0.9;
+    cursor: url(../../../images/Pointer.png), pointer;
+
+}

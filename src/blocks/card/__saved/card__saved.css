@@ -1,0 +1,52 @@
+.card__saved {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    border-radius: 10px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.card__saved_normal {
+    background-image: url(../../../images/trash.png);
+}
+    
+.card__saved_normal:hover .card__saved_delete-message {
+    background-image: url(../../../images/trashHover.png);
+    display: block;
+}
+
+.card__saved_delete-message {
+    background: #fff;
+    position: absolute;
+    top: 24px;
+    padding: 14px;
+    right: 69px;
+    border-radius: 10px;
+    font-family: 'Roboto reg, 'Arial', sans-serif';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.card__saved_theme {
+    background: #fff;
+    position: absolute;
+    top: 24px;
+    padding: 8px 14px;
+    left: 24px;
+    border-radius: 10px;
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+
+

@@ -1,0 +1,16 @@
+.popup__error {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    margin-top: 3px;
+    opacity: 1;
+}
+
+.popup__error_user-exist {
+    align-self: center;
+    margin-top: 17px;
+}
+

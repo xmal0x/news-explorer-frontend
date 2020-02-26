@@ -1,0 +1,14 @@
+.footer__menu__icon {
+    width: 30px;
+    height: 30px;
+}
+
+.footer__menu__icon:first-of-type {
+    margin-left: 42px;
+}
+
+.footer__menu__icon:last-of-type {
+    margin-left: 28px;
+}
+
+
