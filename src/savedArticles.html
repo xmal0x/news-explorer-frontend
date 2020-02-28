@@ -21,11 +21,11 @@
                             <a href="/savedArticles.html" class="header__item header__item_black">Сохраненные статьи</a>
                             <div class="header__auth-control header__auth-control_black">
                                 <div class="header__item header__item_black header__item_auth">Грета</div>
-                                <img class="header__item__auth_image" src="<%=require('./images/authBlack.png')%>">
+                                <img class="header__item__auth_image" alt="auth image" src="<%=require('./images/authBlack.png')%>">
                             </div>
                         </div>
                     </div>
-                    <img class="header__authorized_small" src="<%=require('./images/menuB.png')%>">
+                    <img class="header__authorized_small" alt="small menu" src="<%=require('./images/menuB.png')%>">
 
                 </header>
                 <div class="main-content__saved">
@@ -104,9 +104,9 @@
                         <a href="https://praktikum.yandex.ru/" class="footer__menu__link" target="_blank">Яндекс.Практикум</a>  
                     </div>      
                              
-                    <a href="https://github.com/xmal0x/"><img src="<%=require('./images/Vector.png')%>" class="footer__menu__icon" target="_blank"></a>               
-                    <a href="https://facebook.com/"><img src="<%=require('./images/Vector_2.png')%>" class="footer__menu__icon" target="_blank"></a>                   
-                </img>
+                    <a href="https://github.com/xmal0x/" target="_blank"><img src="<%=require('./images/Vector.png')%>" alt="vector" class="footer__menu__icon"></a>               
+                    <a href="https://facebook.com/" target="_blank"><img src="<%=require('./images/Vector_2.png')%>" alt="vector" class="footer__menu__icon"></a>                   
+                </div>
             </footer>
         </div>
         <script type="module" src="<%= htmlWebpackPlugin.files.chunks.savedArticles.entry %>"></script>
