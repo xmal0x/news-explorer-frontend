@@ -1,3 +1,16 @@
 .card__content {
     margin: 20px 24px 24px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .card__content {
+        margin: 16px 16px 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card__content {
+        margin: 16px 16px 16px;
+    }
+}

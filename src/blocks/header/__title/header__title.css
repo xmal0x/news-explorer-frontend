@@ -6,3 +6,18 @@
     font-size: 20px;
     line-height: 24px;
 }
+
+@media screen and (max-width: 768px) {
+    .header__title {
+        padding-left: 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__title {
+        padding-left: 16px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        font-size: 16px;
+    }
+}

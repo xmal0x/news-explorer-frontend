@@ -8,3 +8,10 @@
     line-height: 20px;
     color: #B6BCBF;
 }
+
+@media screen and (max-width: 320px) {
+    .card__source {
+        bottom: 16px;
+
+    }
+}

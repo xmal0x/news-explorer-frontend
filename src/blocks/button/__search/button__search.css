@@ -23,3 +23,11 @@
     background: #2A65CC;
     cursor: url(../../../images/Pointer.png), pointer;
 }
+
+@media screen and (max-width: 320px) {
+    .button__search {
+        position: relative;
+        margin-top: 16px;
+        width: 100%;
+    }
+}

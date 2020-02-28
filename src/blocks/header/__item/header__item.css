@@ -21,3 +21,25 @@
 .header__item_auth {
     padding-right: 10px; 
 }
+
+.header__item_not-active {
+    color: #B6BCBF;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header__item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+

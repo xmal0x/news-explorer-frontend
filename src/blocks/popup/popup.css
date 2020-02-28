@@ -17,3 +17,11 @@
     align-items: center;
     justify-content: center;
 }
+
+
+@media screen and (max-width: 320px) {
+    .popup {
+        position: absolute;
+        height: 100%;
+    }
+}

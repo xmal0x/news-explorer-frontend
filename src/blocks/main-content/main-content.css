@@ -5,8 +5,16 @@
 @import url(./__saved/main-content__saved.css);
 
 .main-content {
-    height: 496px;
+    max-height: 496px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+@media screen and (max-width: 320px) {
+    .main-content {
+        display: block;
+        padding: 30px 16px 32px;
+        ;
+    }
 }

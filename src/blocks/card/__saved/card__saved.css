@@ -48,5 +48,21 @@
     line-height: 24px;
 }
 
+@media screen and (max-width: 768px) {
+    .card__saved {
+        top: 8px;
+        right: 8px;
+    }
+
+    .card__saved_theme {
+        top: 8px;
+        left: 8px;
+    }
+
+    .card__saved_delete-message {
+        display: none;
+    }
+}
+
 
 

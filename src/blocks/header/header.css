@@ -10,7 +10,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    max-height: 80px;
     align-items: center;
     color: #fff;    
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -20,3 +20,13 @@
     color: #000;
     border-bottom: 1px solid #D1D2D6;
 }
+
+@media screen and (max-width: 320px) {
+    .header_opened {
+        background-color: #1a1b22;
+    }
+}
+
+
+
+

@@ -2,8 +2,22 @@
 @import url(./__content/author__content.css);
 
 .author {
-    height: 624px;
+    max-height: 624px;
     display: flex;
     align-items: flex-start;
     margin: 0px 104px;
+}
+
+@media screen and (max-width: 768px) {
+    .author {
+        margin: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .author {
+        flex-direction: column;
+        margin: 32px 16px 80px;
+        max-height: none;
+    }
 }

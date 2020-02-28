@@ -16,3 +16,15 @@
 .footer__menu__link:last-of-type {
     min-width: 192px;
 }
+@media screen and (max-width: 320px) {
+    .footer__menu__link {
+        font-size: 18px;
+        line-height: 48px;
+        padding-bottom: 10px
+        
+    }
+
+    .footer__menu__link:last-of-type {
+        min-width: 100%;
+    }
+}

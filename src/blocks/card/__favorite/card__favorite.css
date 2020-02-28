@@ -41,3 +41,25 @@
     font-size: 10px;
     line-height: 12px;
 }
+
+@media screen and (max-width: 768px) {
+    .card__favorite {
+        top: 8px;
+        right: 8px;
+    }
+
+    .card__favorite_message {
+        top: 8px;
+        padding: 8px;
+        right: 52px;
+        margin-left: 8px;
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card__favorite {
+        top: 24px;
+        right: 24px;
+    }
+}
