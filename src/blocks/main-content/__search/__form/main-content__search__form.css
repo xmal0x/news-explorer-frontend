@@ -17,6 +17,13 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .main-content__search__form {
+        width: 92%;
+        height: 56px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .main-content__search__form {
         width: 92%;

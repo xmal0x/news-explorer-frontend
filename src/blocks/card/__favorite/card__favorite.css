@@ -63,3 +63,11 @@
         right: 24px;
     }
 }
+
+
+@media screen and (max-width: 550px) {
+    .card__favorite {
+        top: 24px;
+        right: 24px;
+    }
+}

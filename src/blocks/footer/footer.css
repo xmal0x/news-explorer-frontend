@@ -16,6 +16,14 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .footer {
+        flex-direction: column-reverse;
+        margin: 20px 16px;
+        height: 176px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .footer {
         flex-direction: column-reverse;

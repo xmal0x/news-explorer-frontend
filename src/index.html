@@ -116,7 +116,7 @@
             </footer>
         </div>
 
-        <div class="popup">
+        <div class="popup page-element_hidden">
             <div class="popup__content">
                 <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close">
                 <h3 class="popup__title">Вход</h3>
@@ -158,22 +158,24 @@
             </div>
         </div>
 
-        <div class="popup page-element_hidden">
-            <div class="header__title">NewsExplorer</div>
-            <div class="header__non-authorized page-element_hidden">
-                <div class="header__menu">
-                    <a href="/" class="header__item header__item_active">Главная</a>
-                    <div class="header__item-border">Авторизоваться</div>
-                </div> 
-            </div>
-            <div class="header__authorized">
-                <div class="header__menu_mobile">
-                    <a href="/" class="header__item header__item_active">Главная</a>
-                    <a href="/savedArticles.html" class="header__item header__item_not-active">Сохраненные статьи</a>
-                    <div class="header__auth-control">
-                        <div class="header__item header__item_auth">Грета</div>
-                        <img class="header__item__auth_image" src="<%=require('./images/authWhite.png')%>">
-                    </div>                            
+        <div class="header__mobile">
+            <div class="header__mobile__content">
+                <div class="header__title">NewsExplorer</div>
+                <div class="header__non-authorized page-element_hidden">
+                    <div class="header__menu">
+                        <a href="/" class="header__item header__item_active">Главная</a>
+                        <div class="header__item-border">Авторизоваться</div>
+                    </div> 
+                </div>
+                <div class="header__authorized_mobile">
+                    <div class="header__menu_mobile">
+                        <a href="/" class="header__item">Главная</a>
+                        <a href="/savedArticles.html" class="header__item">Сохраненные статьи</a>
+                        <div class="header__auth-control">
+                            <div class="header__item header__item_auth">Грета</div>
+                            <img class="header__item__auth_image" src="<%=require('./images/authWhite.png')%>">
+                        </div>                            
+                    </div>
                 </div>
             </div>
         </div>

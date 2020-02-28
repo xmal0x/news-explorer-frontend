@@ -18,6 +18,17 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .card__text {
+        font-size: 16px;
+        line-height: 22px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .card__text {
         font-size: 16px;

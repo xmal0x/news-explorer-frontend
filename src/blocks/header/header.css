@@ -6,6 +6,7 @@
 @import url(./__non-authorized/header__non-authorized.css);
 @import url(./__title/header__title.css);
 @import url(./__auth-control/header__auth-control.css);
+@import url(./__mobile/header__mobile.css);
 
 .header {
     display: flex;
@@ -21,11 +22,6 @@
     border-bottom: 1px solid #D1D2D6;
 }
 
-@media screen and (max-width: 320px) {
-    .header_opened {
-        background-color: #1a1b22;
-    }
-}
 
 
 

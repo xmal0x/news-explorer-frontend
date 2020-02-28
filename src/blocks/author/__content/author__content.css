@@ -5,6 +5,12 @@
     margin-left: 56px; 
 }
 
+@media screen and (max-width: 550px) {
+    .author__content {
+        margin-left: 0px; 
+    }
+}
+
 @media screen and (max-width: 320px) {
     .author__content {
         margin-left: 0px; 

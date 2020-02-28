@@ -24,6 +24,15 @@
     cursor: url(../../../images/Pointer.png), pointer;
 }
 
+
+@media screen and (max-width: 550px) {
+    .button__search {
+        position: relative;
+        margin-top: 16px;
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .button__search {
         position: relative;

@@ -9,6 +9,12 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .card__content {
+        margin: 16px 16px 16px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .card__content {
         margin: 16px 16px 16px;

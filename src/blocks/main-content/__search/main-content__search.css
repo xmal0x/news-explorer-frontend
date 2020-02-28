@@ -2,4 +2,6 @@
 
 .main-content__search {
     position: relative;
+    margin-top: 64px;
+    margin-bottom: 80px;
 }

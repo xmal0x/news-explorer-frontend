@@ -14,6 +14,14 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .author {
+        flex-direction: column;
+        margin: 32px 16px 80px;
+        max-height: none;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .author {
         flex-direction: column;

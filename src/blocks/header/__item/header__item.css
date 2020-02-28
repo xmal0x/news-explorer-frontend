@@ -2,7 +2,7 @@
 @import url(./__auth/header__item__auth.css);
 
 .header__item {
-    padding-right: 32px;
+    margin-right: 32px;
     align-self: center;
 
     font-family: 'Roboto reg', 'Arial', sans-serif;
@@ -19,7 +19,7 @@
 }
 
 .header__item_auth {
-    padding-right: 10px; 
+    margin-right: 10px; 
 }
 
 .header__item_not-active {
@@ -35,11 +35,24 @@
     }
 }
 
+
+@media screen and (max-width: 550px) {
+    .header__item {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 56px;
+        align-self: auto;
+    }
+}
+
+
+
 @media screen and (max-width: 320px) {
     .header__item {
         font-weight: 500;
-        font-size: 16px;
-        line-height: 24px;
+        font-size: 18px;
+        line-height: 56px;
+        align-self: auto;
     }
 }
 

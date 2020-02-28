@@ -15,6 +15,15 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .main-content__description {
+        font-size: 18px;
+        line-height: 24px;
+        width: 100%;
+        margin: 16px 0px 122px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .main-content__description {
         font-size: 18px;

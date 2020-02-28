@@ -1,0 +1,22 @@
+@import url(./__content/header__mobile__content.css);
+
+.header__mobile {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100%;
+    display: none;
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .header__mobile {
+        display: block;
+    }
+}

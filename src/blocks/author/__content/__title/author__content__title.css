@@ -17,6 +17,15 @@
     }
 }
 
+@media screen and (max-width: 550px) {
+    .author__content__title {
+        font-size: 30px;
+        line-height: 40px;
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+}
+
 @media screen and (max-width: 320px) {
     .author__content__title {
         font-size: 30px;

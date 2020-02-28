@@ -23,3 +23,12 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .header__auth-control {
+        margin-top: 22px;
+        margin: auto;
+
+    }
+}
+
+

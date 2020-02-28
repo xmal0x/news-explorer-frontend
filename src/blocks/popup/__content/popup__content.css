@@ -17,7 +17,7 @@
         top: 0;
         left: 0;
         width: 100%;
-        min-height: calc(100% - 58px);
+        min-height: 100%;
         padding: 16px;
         margin-top: 58px;
         border-radius: 16px 16px 0 0;
