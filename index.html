@@ -7,7 +7,7 @@
         <meta name="description" content="News explorer for Yandex Praktikum">
         <meta name="author" content="Kirill Galkin">
         <title>News explorer</title>
-        <link rel="stylesheet" href="style.20ef97cb6ab39ba992c8.css">        
+        <link rel="stylesheet" href="main/style.7e8513dfd980cceec8b0.css">        
         <link rel='icon' href='favicon.png' type='image/x-icon'>
     </head>
     <body>
@@ -16,20 +16,20 @@
                 <header class="header root__section header_opened">
                     <div class="header__title">NewsExplorer</div>
                     <div class="header__non-authorized page-element_hidden">
-                        <div class="header__menu">
-                            <a href="/" class="header__item header__item_active">Главная</a>
-                            <div class="header__item-border">Авторизоваться</div>
-                        </div> 
+                        <ul class="header__menu">
+                            <li><a href="/" class="header__item header__item_active">Главная</a></li>
+                            <li class="header__item-border">Авторизоваться</li>
+                        </ul> 
                     </div>
                     <div class="header__authorized">
-                        <div class="header__menu">
-                            <a href="/" class="header__item header__item_active">Главная</a>
-                            <a href="/savedArticles.html" class="header__item header__item_not-active">Сохраненные статьи</a>
-                            <div class="header__auth-control">
+                        <ul class="header__menu">
+                            <li><a href="/" class="header__item header__item_active">Главная</a></li>
+                            <li><a href="/savedArticles.html" class="header__item header__item_not-active">Сохраненные статьи</a></li>
+                            <li class="header__auth-control">
                                 <div class="header__item header__item_auth">Грета</div>
                                 <img class="header__item__auth_image" alt="auth image" src="009ce2feb244a0dcebebd249f11d6b81.png">
-                            </div>                            
-                        </div>
+                            </li>                            
+                        </ul>
                     </div>
                     <img class="header__authorized_small" alt="small menu" src="3e43c1c7c1670e3f2976959528f5ee12.png">                    
                 </header>
@@ -117,12 +117,12 @@
         </div>
 
         <div class="popup page-element_hidden">
-            <div class="popup__content">
+            <div class="popup__content ">
                 <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="popup__close">
                 <h3 class="popup__title">Вход</h3>
                 <form class="form">
                     <span class="popup__label">Email</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" required>
+                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                     <span class="popup__error">Неправильный формат email</span>
                     <span class="popup__label">Пароль</span>
                     <input type="password" name="email" class="popup__input" placeholder="Введите пароль" required>
@@ -138,11 +138,11 @@
                 <h3 class="popup__title">Регистрация</h3>
                 <form class="form">
                     <span class="popup__label">Email</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" required>
+                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                     <span class="popup__label">Пароль</span>
                     <input type="password" name="email" class="popup__input" placeholder="Введите пароль" required>
                     <span class="popup__label">Имя</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите свое имя" required>
+                    <input type="text" name="email" class="popup__input" placeholder="Введите свое имя" minlength="2" maxlength="30" required>
                     <span class="popup__error popup__error_user-exist">Такой пользователь уже есть</span>
                     <button class="button button__login button__login_disabled button__login_error" >Зарегистрироваться</button>
                     <span class="popup__sec-text">или <button class="button button__text">Войти</button></span>
@@ -162,20 +162,20 @@
             <div class="header__mobile__content">
                 <div class="header__title">NewsExplorer</div>
                 <div class="header__non-authorized page-element_hidden">
-                    <div class="header__menu">
-                        <a href="/" class="header__item header__item_active">Главная</a>
-                        <div class="header__item-border">Авторизоваться</div>
-                    </div> 
+                    <ul class="header__menu">
+                        <li><a href="/" class="header__item header__item_active">Главная</a></li>
+                        <li class="header__item-border">Авторизоваться</li>
+                    </ul> 
                 </div>
                 <div class="header__authorized_mobile">
-                    <div class="header__menu_mobile">
-                        <a href="/" class="header__item">Главная</a>
-                        <a href="/savedArticles.html" class="header__item">Сохраненные статьи</a>
+                    <ul class="header__menu_mobile">
+                        <li><a href="/" class="header__item">Главная</a></li>
+                        <li><a href="/savedArticles.html" class="header__item">Сохраненные статьи</a></li>
                         <div class="header__auth-control">
                             <div class="header__item header__item_auth">Грета</div>
                             <img class="header__item__auth_image" alt="auth image" src="009ce2feb244a0dcebebd249f11d6b81.png">
                         </div>                            
-                    </div>
+                    </ul>
                 </div>
             </div>
         </div>
