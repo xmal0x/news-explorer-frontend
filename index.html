@@ -7,31 +7,33 @@
         <meta name="description" content="News explorer for Yandex Praktikum">
         <meta name="author" content="Kirill Galkin">
         <title>News explorer</title>
-        <link rel="stylesheet" href="style.ab35ef195b4b125f8557.css">        
+        <link rel="stylesheet" href="main/style.2c6ccecc4ac2b25dfd55.css">        
         <link rel='icon' href='favicon.png' type='image/x-icon'>
     </head>
     <body>
         <div class="root">
             <div class="content content__header">
-                <header class="header root__section">
+                <header class="header root__section header_opened">
                     <div class="header__title">NewsExplorer</div>
-                    <div class="header__non-authorized">
-                        <div class="header__menu">
-                            <a href="/" class="header__item header__item_active">Главная</a>
-                            <div class="header__item-border">Авторизоваться</div>
-                        </div> 
+                    <div class="header__non-authorized page-element_hidden">
+                        <ul class="header__menu">
+                            <li><a href="/" class="header__item header__item_active">Главная</a></li>
+                            <li class="header__item-border">Авторизоваться</li>
+                        </ul> 
                     </div>
-                    <div class="header__authorized page-element_hidden">
-                        <div class="header__menu">
-                            <a href="/" class="header__item header__item_active">Главная</a>
-                            <a href="/savedArticles.html" class="header__item">Сохраненные статьи</a>
-                            <div class="header__auth-control">
+                    <div class="header__authorized">
+                        <ul class="header__menu">
+                            <li><a href="/" class="header__item header__item_active">Главная</a></li>
+                            <li><a href="/savedArticles.html" class="header__item header__item_not-active">Сохраненные статьи</a></li>
+                            <li class="header__auth-control">
                                 <div class="header__item header__item_auth">Грета</div>
-                                <img class="header__item__auth_image" src="009ce2feb244a0dcebebd249f11d6b81.png">
-                            </div>
-                        </div>
+                                <img class="header__item__auth_image" alt="auth image" src="009ce2feb244a0dcebebd249f11d6b81.png">
+                            </li>                            
+                        </ul>
                     </div>
+                    <img class="header__authorized_small" alt="small menu" src="3e43c1c7c1670e3f2976959528f5ee12.png">                    
                 </header>
+                
                 <div class="main-content">
                     <div class="main-content__content">
                         <h1 class="main-content__title">Что в мире творится?</h1>
@@ -44,7 +46,7 @@
                 </div>
             </div>
             <div class="result">
-                <div class="result__founded page-element_hidden">
+                <div class="result__founded">
                     <h3 class="result__title">Результаты поиска</h3>
                     <div class="cards">                    
                         <div class="card">
@@ -87,7 +89,7 @@
                     <div class="result__load__spinner"></div>
                     <div class="result__load__text">Идет поиск новостей...</div>
                 </div>
-                <div class="result__not-found">
+                <div class="result__not-found page-element_hidden">
                     <img src="7fbb9bd925bdb2bcfbcc102519428770.png" alt="not found image" class="result__not-found__image">
                     <h4 class="result__not-found__title">Ничего не найдено</h4>
                     <span class="result__not-found__text">К сожалению по вашему запросу ничего не найдено.</span>                    
@@ -104,21 +106,23 @@
             <footer class="footer">
                 <div class="footer__copyright">© 2020 Supersite, Powered by News API</div>
                 <div class="footer__menu">
-                    <a href="/" class="footer__menu__link">Главная</a>                     
-                    <a href="https://praktikum.yandex.ru/" class="footer__menu__link" target="_blank">Яндекс.Практикум</a>                     
-                    <a href="https://github.com/xmal0x/"><img src="c8600eef4830824389027df49cece3bd.png" class="footer__menu__icon" target="_blank"></a>               
-                    <a href="https://facebook.com/"><img src="b7396679fde97ee3268eab802d2d89cc.png" class="footer__menu__icon" target="_blank"></a>                   
-                </img>
+                    <div class="footer__menu__links">
+                        <a href="/" class="footer__menu__link">Главная</a>                     
+                        <a href="https://praktikum.yandex.ru/" class="footer__menu__link" target="_blank">Яндекс.Практикум</a>  
+                    </div>                        
+                    <a href="https://github.com/xmal0x/" target="_blank"><img src="c8600eef4830824389027df49cece3bd.png" alt="vector" class="footer__menu__icon"></a>               
+                    <a href="https://facebook.com/" target="_blank"><img src="b7396679fde97ee3268eab802d2d89cc.png" alt="vector" class="footer__menu__icon"></a>                   
+                </div>
             </footer>
         </div>
 
         <div class="popup page-element_hidden">
-            <div class="popup__content">
+            <div class="popup__content ">
                 <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="popup__close">
                 <h3 class="popup__title">Вход</h3>
                 <form class="form">
                     <span class="popup__label">Email</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" required>
+                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                     <span class="popup__error">Неправильный формат email</span>
                     <span class="popup__label">Пароль</span>
                     <input type="password" name="email" class="popup__input" placeholder="Введите пароль" required>
@@ -134,11 +138,11 @@
                 <h3 class="popup__title">Регистрация</h3>
                 <form class="form">
                     <span class="popup__label">Email</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" required>
+                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
                     <span class="popup__label">Пароль</span>
                     <input type="password" name="email" class="popup__input" placeholder="Введите пароль" required>
                     <span class="popup__label">Имя</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите свое имя" required>
+                    <input type="text" name="email" class="popup__input" placeholder="Введите свое имя" minlength="2" maxlength="30" required>
                     <span class="popup__error popup__error_user-exist">Такой пользователь уже есть</span>
                     <button class="button button__login button__login_disabled button__login_error" >Зарегистрироваться</button>
                     <span class="popup__sec-text">или <button class="button button__text">Войти</button></span>
@@ -151,6 +155,28 @@
                 <img src="8442073a2d00bee06ee64155cd156f7c.svg" alt="close" class="popup__close">
                 <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
                 <button class="button button__text button__text_enter">Выполнить вход</button>
+            </div>
+        </div>
+
+        <div class="header__mobile">
+            <div class="header__mobile__content">
+                <div class="header__title">NewsExplorer</div>
+                <div class="header__non-authorized page-element_hidden">
+                    <ul class="header__menu">
+                        <li><a href="/" class="header__item header__item_active">Главная</a></li>
+                        <li class="header__item-border">Авторизоваться</li>
+                    </ul> 
+                </div>
+                <div class="header__authorized_mobile">
+                    <ul class="header__menu_mobile">
+                        <li><a href="/" class="header__item">Главная</a></li>
+                        <li><a href="/savedArticles.html" class="header__item">Сохраненные статьи</a></li>
+                        <div class="header__auth-control">
+                            <div class="header__item header__item_auth">Грета</div>
+                            <img class="header__item__auth_image" alt="auth image" src="009ce2feb244a0dcebebd249f11d6b81.png">
+                        </div>                            
+                    </ul>
+                </div>
             </div>
         </div>
 
