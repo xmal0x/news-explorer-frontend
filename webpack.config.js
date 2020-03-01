@@ -25,7 +25,12 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [(isDev ? 'style-loader' : MiniCssExtractPlugin.loader), 'css-loader', 'postcss-loader']
+                use: [
+                    {
+                        loader:isDev ? 'style-loader' : MiniCssExtractPlugin.loader,
+                        options: isDev ? {} : { publicPath: '../' }    
+                    }, 
+                    'css-loader', 'postcss-loader']
             },
             {
                 test: /\.(gif|png|jpe?g|svg)$/i,
@@ -58,7 +63,7 @@ module.exports = {
             filename: 'savedArticles.html'
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.[contenthash].css'
+            filename: isDev ? 'style.[contenthash].css' : '[name]/style.[contenthash].css',
         }),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,

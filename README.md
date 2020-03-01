@@ -1,5 +1,11 @@
 # news-explorer-frontend
 
+__Ссылка на проект__
+http://api-news.ga/
+
+__Ссылка на gh-pages__
+https://xmal0x.github.io/news-explorer-frontend/
+
 __Что это__   
 Дипломная работа по курсу Web разработка от Yandex Практикум
 

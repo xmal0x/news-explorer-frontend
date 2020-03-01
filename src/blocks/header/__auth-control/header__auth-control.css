@@ -31,4 +31,15 @@
     }
 }
 
+@media screen and (max-width: 320px) {
+    .header__auth-control {
+        padding: 6px 106px;
+
+    }
+
+    .header__auth-control_black {
+        padding: 6px 106px;
+
+    }
+}
 
