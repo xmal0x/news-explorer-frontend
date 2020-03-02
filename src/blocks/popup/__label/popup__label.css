@@ -1,0 +1,13 @@
+.popup__label {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2F71E5;
+    margin-top: 30px;
+}
+
+.popup__label:first-of-type {
+    margin-top: 0px;
+}

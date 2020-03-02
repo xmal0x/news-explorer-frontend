@@ -1,0 +1,28 @@
+@import url(./__description/main-content__description.css);
+@import url(./__search/main-content__search.css);
+@import url(./__title/main-content__title.css);
+@import url(./__content/main-content__content.css);
+@import url(./__saved/main-content__saved.css);
+
+.main-content {
+    max-height: 496px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 550px) {
+    .main-content {
+        display: block;
+        padding: 30px 16px 32px;
+        ;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-content {
+        display: block;
+        padding: 30px 16px 32px;
+        ;
+    }
+}

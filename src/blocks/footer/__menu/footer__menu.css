@@ -1,0 +1,19 @@
+@import url(./__icon/footer__menu__icon.css);
+@import url(./__link/footer__menu__link.css);
+
+.footer__menu {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 550px) {
+    .footer__menu {
+        align-items: baseline;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer__menu {
+        align-items: baseline;
+    }
+}

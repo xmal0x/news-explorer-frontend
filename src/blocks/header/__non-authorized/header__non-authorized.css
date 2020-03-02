@@ -1,0 +1,29 @@
+.header__non-authorized {
+    padding-right: 104px;
+}
+
+@media screen and (max-width: 768px) {
+    .header__non-authorized {
+        padding-right: 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .header__non-authorized {
+        display: none;
+    }
+
+    .header__authorized_small {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__non-authorized {
+        display: none;
+    }
+
+    .header__authorized_small {
+        display: block;
+    }
+}

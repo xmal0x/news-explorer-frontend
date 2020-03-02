@@ -1,0 +1,16 @@
+.result__title {
+    margin: 0px;
+    font-family: 'Robotoslab', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    padding-top: 80px; 
+}
+
+@media screen and (max-width: 320px) {
+    .result__title {
+        padding-top: 32px; 
+    }
+}

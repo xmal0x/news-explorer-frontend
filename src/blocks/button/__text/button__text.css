@@ -1,0 +1,12 @@
+.button__text {
+    margin-left: -5px;
+    color: #2F71E5;
+}
+
+.button__text_enter {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+}

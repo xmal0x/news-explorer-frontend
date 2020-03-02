@@ -1,0 +1,37 @@
+.card__title {
+    font-family: 'Robotoslab', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    color: #1A1B22;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 768px) {
+    .card__title {
+        font-size: 22px;
+        line-height: 24px;
+        margin-bottom: 10px;
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card__title {
+        font-size: 21px;
+        line-height: 24px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card__title {
+        font-size: 21px;
+        line-height: 24px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}

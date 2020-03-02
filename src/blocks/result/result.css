@@ -1,0 +1,21 @@
+@import url(./__founded/result__founded.css);
+@import url(./__load/result__load.css);
+@import url(./__not-found/result__not-found.css);
+@import url(./__title/result__title.css);
+
+.result {
+    background: #F5F6F7;
+    padding: 0px 104px;
+}
+
+@media screen and (max-width: 768px) {
+    .result {
+        padding: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .result {
+        padding: 0px 16px;
+    }
+}
