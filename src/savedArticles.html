@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<ul lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +16,14 @@
                 <header class="header header_white root__section">
                     <div class="header__title">NewsExplorer</div>
                     <div class="header__authorized">
-                        <div class="header__menu">
-                            <a href="/" class="header__item header__item_black header__item_active">Главная</a>
-                            <a href="/savedArticles.html" class="header__item header__item_black">Сохраненные статьи</a>
-                            <div class="header__auth-control header__auth-control_black">
+                        <ul class="header__menu">
+                            <li><a href="/" class="header__item header__item_black header__item_active">Главная</a></li>
+                            <li><a href="/savedArticles.html" class="header__item header__item_black">Сохраненные статьи</a></li>
+                            <li class="header__auth-control header__auth-control_black">
                                 <div class="header__item header__item_black header__item_auth">Грета</div>
                                 <img class="header__item__auth_image" alt="auth image" src="<%=require('./images/authBlack.png')%>">
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                     <img class="header__authorized_small" alt="small menu" src="<%=require('./images/menuB.png')%>">
 
@@ -111,4 +111,4 @@
         </div>
         <script type="module" src="<%= htmlWebpackPlugin.files.chunks.savedArticles.entry %>"></script>
     </body>
-</html>
+</ul>

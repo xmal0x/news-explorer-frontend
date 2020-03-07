@@ -6,6 +6,7 @@
 @import url(./__title/card__title.css);
 @import url(./__content/card__content.css);
 @import url(./__saved/card__saved.css);
+@import url(./__img-container/card__img-container.css);
 
 .card {
     width: 400px;

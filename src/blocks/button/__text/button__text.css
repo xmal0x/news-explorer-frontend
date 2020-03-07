@@ -1,6 +1,10 @@
 .button__text {
     margin-left: -5px;
     color: #2F71E5;
+    border: none;
+    margin-left: 5px; 
+    cursor: url(../../../images/Pointer.png), pointer;
+    
 }
 
 .button__text_enter {

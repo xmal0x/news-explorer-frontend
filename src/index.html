@@ -15,13 +15,13 @@
             <div class="content content__header">
                 <header class="header root__section header_opened">
                     <div class="header__title">NewsExplorer</div>
-                    <div class="header__non-authorized page-element_hidden">
+                    <div class="header__non-authorized ">
                         <ul class="header__menu">
                             <li><a href="/" class="header__item header__item_active">Главная</a></li>
-                            <li class="header__item-border">Авторизоваться</li>
+                            <li class="header__item-border login-button">Авторизоваться</li>
                         </ul> 
                     </div>
-                    <div class="header__authorized">
+                    <div class="header__authorized page-element_hidden">
                         <ul class="header__menu">
                             <li><a href="/" class="header__item header__item_active">Главная</a></li>
                             <li><a href="/savedArticles.html" class="header__item header__item_not-active">Сохраненные статьи</a></li>
@@ -46,7 +46,7 @@
                 </div>
             </div>
             <div class="result">
-                <div class="result__founded">
+                <div class="result__founded page-element_hidden">
                     <h3 class="result__title">Результаты поиска</h3>
                     <div class="cards">                    
                         <div class="card">
@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img src="<%=require('./images/image_04.png')%>" alt="news_2" class="card__image">
+                            <div class="card__img-container"><img src="<%=require('./images/image_04.png')%>" alt="news_2" class="card__image"></div>
                             <div class="card__content">
                                 <div class="card__date">2 августа, 2019</div>
                                 <h4 class="card__title">Лесные огоньки: история одной фотографии</h4>
@@ -92,7 +92,7 @@
                 <div class="result__not-found page-element_hidden">
                     <img src="<%=require('./images/not-found_v1.png')%>" alt="not found image" class="result__not-found__image">
                     <h4 class="result__not-found__title">Ничего не найдено</h4>
-                    <span class="result__not-found__text">К сожалению по вашему запросу ничего не найдено.</span>                    
+                    <span class="result__not-found__text"></span>                    
                 </div>
             </div>
             <div class="author">
@@ -116,45 +116,50 @@
             </footer>
         </div>
 
-        <div class="popup page-element_hidden">
+        <div class="popup login-popup page-element_hidden">
             <div class="popup__content ">
-                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close">
+                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close login-popup__close">
                 <h3 class="popup__title">Вход</h3>
-                <form class="form" name="loginForm">
+                <form class="form login-form" name="loginForm" novalidate>
                     <span class="popup__label">Email</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
-                    <span class="popup__error">Неправильный формат email</span>
+                    <input type="email" name="email" class="popup__input login-input" placeholder="Введите почту" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
+                    <div id="error-email" class="popup__error"></div>
                     <span class="popup__label">Пароль</span>
-                    <input type="password" name="email" class="popup__input" placeholder="Введите пароль" required>
-                    <button class="button button__login">Войти</button>
-                    <span class="popup__sec-text">или <button class="button button__text">Зарегистрироваться</button></span>
+                    <input type="password" name="password" class="popup__input login-input" placeholder="Введите пароль" required>
+                    <div id="error-password" class="popup__error"></div>
+                    <div class="popup__error popup__error-login"></div>
+                    <button class="button button__login button__login_disabled">Войти</button>
+                    <span class="popup__sec-text">или <div class="button button__text reg-button">Зарегистрироваться</div></span>
                 </form>
             </div>
         </div>
 
-        <div class="popup page-element_hidden">
+        <div class="popup reg-popup page-element_hidden">
             <div class="popup__content">
-                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close">
+                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close reg-popup__close">
                 <h3 class="popup__title">Регистрация</h3>
-                <form class="form" name="regForm">
+                <form class="form reg-form" name="regForm" novalidate>
                     <span class="popup__label">Email</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите почту" pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+                    <input type="email" name="email" class="popup__input reg-input" placeholder="Введите почту" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
+                    <div id="error-email" class="popup__error"></div>
                     <span class="popup__label">Пароль</span>
-                    <input type="password" name="email" class="popup__input" placeholder="Введите пароль" required>
+                    <input type="password" name="password" class="popup__input reg-input" placeholder="Введите пароль" required>
+                    <div id="error-password" class="popup__error"></div>
                     <span class="popup__label">Имя</span>
-                    <input type="text" name="email" class="popup__input" placeholder="Введите свое имя" minlength="2" maxlength="30" required>
-                    <span class="popup__error popup__error_user-exist">Такой пользователь уже есть</span>
-                    <button class="button button__login button__login_disabled button__login_error" >Зарегистрироваться</button>
-                    <span class="popup__sec-text">или <button class="button button__text">Войти</button></span>
+                    <input type="text" name="name" class="popup__input reg-input" placeholder="Введите свое имя" minlength="2" maxlength="30" required>
+                    <div id="error-name" class="popup__error"></div>                    
+                    <div class="popup__error popup__error-reg"></div>
+                    <button class="button button__reg button__reg_disabled" disabled>Зарегистрироваться</button>
+                    <span class="popup__sec-text">или <div class="button button__text login-button">Войти</div></span>
                 </form>
             </div>
         </div>
 
-        <div class="popup page-element_hidden">
+        <div class="popup success-popup page-element_hidden">
             <div class="popup__content">
-                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close">
+                <img src="<%=require('./images/close.svg')%>" alt="close" class="popup__close success-popup__close">
                 <h3 class="popup__title">Пользователь успешно зарегистрирован!</h3>
-                <button class="button button__text button__text_enter">Выполнить вход</button>
+                <button class="button button__text button__text_enter login-button">Выполнить вход</button>
             </div>
         </div>
 
@@ -164,7 +169,7 @@
                 <div class="header__non-authorized page-element_hidden">
                     <ul class="header__menu">
                         <li><a href="/" class="header__item header__item_active">Главная</a></li>
-                        <li class="header__item-border">Авторизоваться</li>
+                        <li class="header__item-border login-button">Авторизоваться</li>
                     </ul> 
                 </div>
                 <div class="header__authorized_mobile">

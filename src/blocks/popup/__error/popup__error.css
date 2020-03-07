@@ -9,8 +9,14 @@
     opacity: 1;
 }
 
-.popup__error_user-exist {
+.popup__error-reg {
     align-self: center;
     margin-top: 17px;
+    margin-bottom: -17px;
 }
 
+.popup__error-login {
+    align-self: center;
+    margin-top: 17px;
+    margin-bottom: -17px;
+}
