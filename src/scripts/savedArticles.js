@@ -28,11 +28,9 @@ function setArticlesNum() {
 }
 
 function setKeywords() {
-    debugger;
     const keywordsElem = document.querySelector('.main-content__saved__description_keywords');
     let popularKeys = {};
     keywords.forEach(keyword => {
-        debugger;
         if(!popularKeys.hasOwnProperty(keyword)) {
             popularKeys[keyword] = 1;
         } else {
@@ -64,6 +62,8 @@ function getUserCardsAndSetTitle() {
             const cardElem = new Card(card.source, card.title, card.date, card.text, card.image, card.keyword, card.link).createCardElement();
             keywords.push(card.keyword);
             cardList.addCard(cardElem);
+            cardElem["_id"] = card._id;
+            cardElem.querySelector('.card__saved_normal').addEventListener('click', api.deleteCard.bind(cardElem));
         })
 
         setArticlesNum();

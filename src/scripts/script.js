@@ -65,37 +65,8 @@ function search() {
         return;
     }
     api.searchNews(apiKey, userRequest);
-
-
-    /*
-    api.searchNews(apiKey, userRequest).then(data => {
-        new Page().hideElementByClassName('result__load');
-        if(data.status === 'ok' && data.totalResults === 0) {
-            new Page().showElementByClassName('result__not-found');
-        } else {
-            new Page().hideElementByClassName('result__not-found');
-            new Page().showElementByClassName('result__founded');
-
-        }
-    })
-
-*/
-/*
-debugger;
-    const token = localStorage.getItem('token');
-    fetch('http://api.api-news.ga/users/me', {
-        method: 'GET',
-        headers: {
-            Authorization: `${token}`
-        }
-    }).then(res => {
-        debugger;
-    }).catch(err => {
-        debugger;
-    })
-*/
-    
 }
+
 function showMore() {
     if(api.articlesData.length > 0) {
         const currentNews = api.getNextCards();
@@ -114,11 +85,7 @@ function checkAuth() {
     if(api.userIsAuth()){
         new Page().switchToAuthHeader();
     }
-        
 }
-
-
-
 
 //HANDLERS
 //form open buttons

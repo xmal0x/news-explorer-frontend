@@ -52,7 +52,14 @@ export class Card {
         const favorite = document.createElement('div');
         favorite.classList.add('card__favorite');
         favorite.classList.add('card__favorite_normal');
+        favorite.classList.add('page-element_hidden');
         content.appendChild(favorite);
+
+        const deleteIcon = document.createElement('div');
+        deleteIcon.classList.add('card__saved_normal');
+        deleteIcon.classList.add('card__saved');
+        deleteIcon.classList.add('page-element_hidden');
+        content.appendChild(deleteIcon);
 
         const favoriteMessage = document.createElement('div');
         favoriteMessage.classList.add('card__favorite_message');

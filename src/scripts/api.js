@@ -106,11 +106,14 @@ export class Api {
 
                 const cardList = new CardList(document.querySelector('.cards'));
                 cardList.clearAll();
-
                 currentNews.forEach(card => {
+debugger;
+
                     card["keyword"] = this.keyword;
                     const cardElement = new Card(card.source.name, card.title, card.publishedAt, card.description, 
                         card.urlToImage, keyword, card.url).createCardElement();
+                    const fav = cardElement.querySelector('.card__favorite');
+                    fav.classList.remove('page-element_hidden');
                     cardElement.addEventListener('click', this.saveCard.bind(card));
 
                     cardList.addCard(cardElement);
@@ -211,7 +214,6 @@ export class Api {
     }
 
     saveCard() {
-        debugger;
         const token = localStorage.getItem('token');
         return fetch(`http://api.api-news.ga/articles`, {
             method: 'POST',
@@ -229,7 +231,6 @@ export class Api {
                 image: this.urlToImage,
             })
         }).then(res => {
-            debugger;
             if(res.ok) {
                 return res.json();
             }
@@ -239,5 +240,29 @@ export class Api {
                 console.log(resp)
             })
         });
+    }
+
+    deleteCard() {
+        const cardList = new CardList(document.querySelector('.cards'));
+        cardList.cardListContainer.removeChild(this);
+        const token = localStorage.getItem('token');
+        return fetch(`http://api.api-news.ga/articles/${this._id}`, {
+            method: 'DELETE',
+            headers: {
+                Authorization: token
+            },
+        }).then(res => {
+            if(res.ok) {
+
+                return res.json();
+            }
+            return Promise.reject(res.json());
+        }).catch(err => {
+            err.then(resp => {
+                console.log(resp)
+            })
+        });
+        
+
     }
 }
