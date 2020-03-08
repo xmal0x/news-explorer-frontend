@@ -9,6 +9,8 @@ export class Api {
         this.articlesData = [];
         this.keyword = "";
         this.currentCard;
+        this.userName = '';
+        this.isAuth = false;
     }
 
     signUp(email, password, name) {
@@ -56,25 +58,33 @@ export class Api {
                 return res.json();
             return Promise.reject(res.json());
         }).then((data) => {
-            // сохраняем токен
             localStorage.setItem('token', data.token);
-            new Page().switchToAuthHeader();
-            new Popup(document.querySelector('.login-popup')).close();
+
+            this.getUserInfo().then(data => {
+                this.userName = data.name;
+                new Page().switchToAuthHeader(this.userName);
+                new Popup(document.querySelector('.login-popup')).close();
+            })
+            window.location.href = window.location.href;
         }).catch(err => {
             err.then(err => {
                 new Popup(document.querySelector('.login-popup')).showResultError(err.message);
                 console.log(err.message);
             });
         });
+
+        
     }
 
     searchNews(key, keyword) {
+        new Page().hideElementByClassName('result__not-found');
+        new Page().hideElementByClassName('result__founded');
+
         new Page().showElementByClassName('result__load');
         const apiKey = key;
         this.keyword = keyword;
 
         const from = this.addDays(-7);
-//        const to = `${currentDate.getFullYear()}-${currentDate.getMonth()}-${currentDate.getDay()}`;
         const to = this.getFormatDate(new Date());
 
         const pageSize = '100'; 
@@ -107,13 +117,17 @@ export class Api {
                 const cardList = new CardList(document.querySelector('.cards'));
                 cardList.clearAll();
                 currentNews.forEach(card => {
-debugger;
-
                     card["keyword"] = this.keyword;
                     const cardElement = new Card(card.source.name, card.title, card.publishedAt, card.description, 
                         card.urlToImage, keyword, card.url).createCardElement();
                     const fav = cardElement.querySelector('.card__favorite');
                     fav.classList.remove('page-element_hidden');
+
+                    if(!this.isAuth) {
+                        fav.addEventListener('mouseover', new Page().showAuthError.bind(cardElement));
+                        fav.addEventListener('mouseout', new Page().hideAuthError.bind(cardElement));
+                    }
+
                     card["cardElement"] = cardElement;
                     fav.addEventListener('click', this.saveCard.bind(card));
 
@@ -157,17 +171,15 @@ debugger;
     }
 
     addDays(daysNum) {
-        var today = new Date();
-        var tomorrow = new Date();
+        const today = new Date();
+        const tomorrow = new Date();
         tomorrow.setDate(today.getDate()+daysNum);
         return this.getFormatDate(tomorrow);
     }
 
     userIsAuth() {
-        const token = localStorage.getItem('token');
-        if(!token) {
-            return false;
-        }
+    const token = localStorage.getItem('token');
+
         return fetch(`${this.baseUrl}/users/me`, {
             method: 'GET',
             headers: {
@@ -175,12 +187,9 @@ debugger;
             }
         }).then(res => {
             if(res.ok) {
-                debugger;
-                return true;
+                return res.json();
             }
             return Promise.reject(res.json());
-        }).catch(err => {
-            console.log(err);
         })
     }
 
@@ -196,8 +205,6 @@ debugger;
                 return res.json();
             }
             return Promise.reject(res.json());
-        }).catch(err => {
-            console.log(err);
         })
     }
 
@@ -213,17 +220,14 @@ debugger;
                 return res.json();
             }
             return Promise.reject(res.json());
-        }).catch(err => {
-            console.log(err);
-        });
+        })
     }
 
     saveCard() {
-        this.cardElement.querySelector('.card__favorite').classList.add('card__favorite_marked');
-        this.cardElement.querySelector('.card__favorite').classList.remove('card__favorite_normal');
+
 
         const token = localStorage.getItem('token');
-        return fetch(`http://api.api-news.ga/articles`, {
+        fetch(`http://api.api-news.ga/articles`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -240,6 +244,8 @@ debugger;
             })
         }).then(res => {
             if(res.ok) {
+                this.cardElement.querySelector('.card__favorite').classList.add('card__favorite_marked');
+                this.cardElement.querySelector('.card__favorite').classList.remove('card__favorite_normal');
                 return res.json();
             }
             return Promise.reject(res.json());
@@ -251,17 +257,17 @@ debugger;
     }
 
     deleteCard() {
-        const cardList = new CardList(document.querySelector('.cards'));
-        cardList.cardListContainer.removeChild(this);
+
         const token = localStorage.getItem('token');
-        return fetch(`http://api.api-news.ga/articles/${this._id}`, {
+        fetch(`http://api.api-news.ga/articles/${this._id}`, {
             method: 'DELETE',
             headers: {
                 Authorization: token
             },
         }).then(res => {
             if(res.ok) {
-
+                const cardList = new CardList(document.querySelector('.cards'));
+                cardList.cardListContainer.removeChild(this);
                 return res.json();
             }
             return Promise.reject(res.json());

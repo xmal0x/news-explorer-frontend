@@ -64,8 +64,15 @@ export class Card {
         const favoriteMessage = document.createElement('div');
         favoriteMessage.classList.add('card__favorite_message');
         favoriteMessage.classList.add('page-element_hidden');
-        favoriteMessage.value = "Войдите, чтобы сохранять статьи";
+        favoriteMessage.textContent = "Войдите, чтобы сохранять статьи";
         content.appendChild(favoriteMessage);
+
+        const cardTheme = document.createElement('div');
+        cardTheme.classList.add('card__saved_theme');
+        cardTheme.classList.add('page-element_hidden');
+        cardTheme.style.display = "none";
+        content.appendChild(cardTheme);
+
 
         card.appendChild(content);
 

@@ -25,6 +25,8 @@ const searchBtn = document.querySelector('.button__search');
 
 const showMoreBtn = document.querySelector('.button__show-more');
 
+const exitBtn = document.querySelector('.header__auth-control');
+
 //Fields
 const regEmailField = regForm.email;
 const regPassField = regForm.password;
@@ -47,18 +49,21 @@ const validator = new Validator();
 //FUNCTIONS
 function regNewUser(event) {
     event.preventDefault();
+    if(!regForm.email.value || !regForm.password.value || !regForm.name.value)
+        return;
     api.signUp(regForm.email.value, regForm.password.value, regForm.name.value);
 
 }
 
 function login(event) {
     event.preventDefault();
+    if(!loginForm.email.value || !loginForm.password.value)
+        return;
     api.signIn(loginForm.email.value, loginForm.password.value);
 }
 
 function search() {
 
-//    debugger;
     const userRequest = searchField.value;
     if(userRequest === "") {
         alert('Нужно ввести ключевое слово');
@@ -78,6 +83,10 @@ function showMore() {
                 card.urlToImage, api.keyword, card.url).createCardElement();
             const fav = cardElement.querySelector('.card__favorite');
             fav.classList.remove('page-element_hidden');
+            if(!api.isAuth) {
+                fav.addEventListener('mouseover', new Page().showAuthError.bind(cardElement));
+                fav.addEventListener('mouseout', new Page().hideAuthError.bind(cardElement));
+            }
             card["cardElement"] = cardElement;
             card["keyword"] = api.keyword;
             fav.addEventListener('click', api.saveCard.bind(card));
@@ -87,10 +96,23 @@ function showMore() {
 }
 
 function checkAuth() {
-    debugger;
-    if(api.userIsAuth()){
-        new Page().switchToAuthHeader();
+    const token = localStorage.getItem('token');
+    if(!token) {
+        api.isAuth = false;
+    } else {
+        api.userIsAuth().then(res => {
+            api.userName = res.name;
+            api.isAuth = true;
+            new Page().switchToAuthHeader(api.userName);
+        }).catch(err => {
+            console.log(err);
+        });
     }
+
+}
+
+function exit() {
+    new Page().exitMainPage();
 }
 
 //HANDLERS
@@ -123,6 +145,9 @@ searchBtn.addEventListener('click', search);
 //showmore
 showMoreBtn.addEventListener('click', showMore);
 
+exitBtn.addEventListener('click', exit);
 
 checkAuth();
+
+
 

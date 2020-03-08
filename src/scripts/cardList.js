@@ -8,7 +8,7 @@ export class CardList {
     }
 
     clearAll() {        
-        var child = this.cardListContainer.lastElementChild;  
+        let child = this.cardListContainer.lastElementChild;  
         while (child) { 
             this.cardListContainer.removeChild(child); 
             child = this.cardListContainer.lastElementChild; 
