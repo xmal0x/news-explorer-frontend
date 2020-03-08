@@ -76,12 +76,18 @@ function showMore() {
         currentNews.forEach(card => {
             const cardElement = new Card(card.source.name, card.title, card.publishedAt, card.description, 
                 card.urlToImage, api.keyword, card.url).createCardElement();
+            const fav = cardElement.querySelector('.card__favorite');
+            fav.classList.remove('page-element_hidden');
+            card["cardElement"] = cardElement;
+            card["keyword"] = api.keyword;
+            fav.addEventListener('click', api.saveCard.bind(card));
             cardList.addCard(cardElement);
         });
     } 
 }
 
 function checkAuth() {
+    debugger;
     if(api.userIsAuth()){
         new Page().switchToAuthHeader();
     }

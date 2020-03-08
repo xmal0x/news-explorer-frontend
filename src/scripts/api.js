@@ -114,7 +114,8 @@ debugger;
                         card.urlToImage, keyword, card.url).createCardElement();
                     const fav = cardElement.querySelector('.card__favorite');
                     fav.classList.remove('page-element_hidden');
-                    cardElement.addEventListener('click', this.saveCard.bind(card));
+                    card["cardElement"] = cardElement;
+                    fav.addEventListener('click', this.saveCard.bind(card));
 
                     cardList.addCard(cardElement);
                 });
@@ -164,6 +165,9 @@ debugger;
 
     userIsAuth() {
         const token = localStorage.getItem('token');
+        if(!token) {
+            return false;
+        }
         return fetch(`${this.baseUrl}/users/me`, {
             method: 'GET',
             headers: {
@@ -171,6 +175,7 @@ debugger;
             }
         }).then(res => {
             if(res.ok) {
+                debugger;
                 return true;
             }
             return Promise.reject(res.json());
@@ -214,6 +219,9 @@ debugger;
     }
 
     saveCard() {
+        this.cardElement.querySelector('.card__favorite').classList.add('card__favorite_marked');
+        this.cardElement.querySelector('.card__favorite').classList.remove('card__favorite_normal');
+
         const token = localStorage.getItem('token');
         return fetch(`http://api.api-news.ga/articles`, {
             method: 'POST',
