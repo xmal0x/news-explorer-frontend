@@ -57,9 +57,9 @@ function regNewUser(event) {
 
 function login(event) {
     event.preventDefault();
-    if(!loginForm.email.value || !loginForm.password.value)
+    if(!loginForm.email_login.value || !loginForm.password_login.value)
         return;
-    api.signIn(loginForm.email.value, loginForm.password.value);
+    api.signIn(loginForm.email_login.value, loginForm.password_login.value);
 }
 
 function search() {
