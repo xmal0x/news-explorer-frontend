@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<ul lang="ru">
+<html lang="ru">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
         <meta name="author" content="Kirill Galkin">
         <title>News explorer</title>
         <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.chunks.savedArticles.css %>">        
-        <link rel='icon' href='favicon.png' type='image/x-icon'>
+        <link rel='icon' href="<%=require('./images/favicon.png')%>" type='image/x-icon'>
     </head>
     <body>
         <div class="root">
@@ -111,4 +111,4 @@
         </div>
         <script type="module" src="<%= htmlWebpackPlugin.files.chunks.savedArticles.entry %>"></script>
     </body>
-</ul>
+</html>

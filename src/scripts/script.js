@@ -32,8 +32,8 @@ const regEmailField = regForm.email;
 const regPassField = regForm.password;
 const regNameField = regForm.name;
 
-const loginEmailField = loginForm.email;
-const loginPassField = loginForm.password;
+const loginEmailField = loginForm.email_login;
+const loginPassField = loginForm.password_login;
 
 const searchField = document.querySelector('.main-content__search__form');
 

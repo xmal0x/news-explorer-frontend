@@ -39,7 +39,7 @@
                         <h1 class="main-content__title">Что в мире творится?</h1>
                         <h4 class="main-content__description">Находите самые свежие статьи на любую тему и сохраняйте в своём личном кабинете.</h4>
                         <div class="main-content__search">
-                            <input type="text" placeholder="Введите тему новости" class="main-content__search__form">
+                            <input type="text" placeholder="Введите тему новости" class="main-content__search__form" required>
                             <button class="button button__search">Искать</button>
                         </div>
                     </div>
@@ -122,14 +122,14 @@
                 <h3 class="popup__title">Вход</h3>
                 <form class="form login-form" name="loginForm" novalidate>
                     <span class="popup__label">Email</span>
-                    <input type="email" name="email" class="popup__input login-input" placeholder="Введите почту" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
-                    <div id="error-email" class="popup__error"></div>
+                    <input type="email" name="email_login" class="popup__input login-input" placeholder="Введите почту" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$" required>
+                    <div id="error-email_login" class="popup__error"></div>
                     <span class="popup__label">Пароль</span>
-                    <input type="password" name="password" class="popup__input login-input" placeholder="Введите пароль" required>
-                    <div id="error-password" class="popup__error"></div>
+                    <input type="password" name="password_login" class="popup__input login-input" placeholder="Введите пароль" required>
+                    <div id="error-password_login" class="popup__error"></div>
                     <div class="popup__error popup__error-login"></div>
                     <button class="button button__login button__login_disabled">Войти</button>
-                    <span class="popup__sec-text">или <div class="button button__text reg-button">Зарегистрироваться</div></span>
+                    <div class="popup__sec-text">или <div class="button button__text reg-button">Зарегистрироваться</div></div>
                 </form>
             </div>
         </div>
@@ -150,7 +150,7 @@
                     <div id="error-name" class="popup__error"></div>                    
                     <div class="popup__error popup__error-reg"></div>
                     <button class="button button__reg button__reg_disabled" disabled>Зарегистрироваться</button>
-                    <span class="popup__sec-text">или <div class="button button__text login-button">Войти</div></span>
+                    <div class="popup__sec-text">или <div class="button button__text login-button">Войти</div></div>
                 </form>
             </div>
         </div>

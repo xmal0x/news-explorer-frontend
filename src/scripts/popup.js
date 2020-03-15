@@ -4,8 +4,8 @@ export class Popup {
     }
 
     open() {
-        this.closeAllPopups();
-        this.clearPopup();
+        this._closeAllPopups();
+        this._clearPopup();
         this.popupContainer.classList.remove('page-element_hidden');
     }
 
@@ -20,7 +20,7 @@ export class Popup {
         resultErrorEl.textContent = message;
     }
 
-    clearPopup() {
+    _clearPopup() {
         const inputClass = this.popupContainer.classList.contains('reg-popup') ? 
             '.reg-input' : '.login-input';
         document.querySelectorAll(inputClass).forEach(input => {
@@ -28,7 +28,7 @@ export class Popup {
         });
     }
 
-    closeAllPopups() {
+    _closeAllPopups() {
         document.querySelectorAll('.popup').forEach(popup => {
             new Popup(popup).close();
         });

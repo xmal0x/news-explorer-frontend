@@ -84,8 +84,9 @@ export class Api {
         const apiKey = key;
         this.keyword = keyword;
 
-        const from = this.addDays(-7);
-        const to = this.getFormatDate(new Date());
+        const daysBefore = -7;
+        const from = this._addDays(daysBefore);
+        const to = this._getFormatDate(new Date());
 
         const pageSize = '100'; 
         const url = `http://newsapi.org/v2/everything?q=${keyword}&from=${from}&to=${to}&sortBy=popularity&pageSize=${pageSize}&apiKey=${apiKey}`;
@@ -142,8 +143,9 @@ export class Api {
     }
 
     getNextCards() {
-        const currentNews = this.articlesData.slice(0,3);
-        this.articlesData = this.articlesData.slice(3);
+        const numNewsToShow = 3;
+        const currentNews = this.articlesData.slice(0, numNewsToShow);
+        this.articlesData = this.articlesData.slice(numNewsToShow);
 
         if(this.articlesData.length == 0) {
             new Page().hideElementByClassName('button__show-more');
@@ -155,7 +157,7 @@ export class Api {
         return currentNews;
     }
 
-    getFormatDate(date) {
+    _getFormatDate(date) {
         const year = date.getFullYear();
         let month = date.getMonth() + 1;
         if(month < 10) {
@@ -170,11 +172,11 @@ export class Api {
         return `${year}-${month}-${day}`;
     }
 
-    addDays(daysNum) {
+    _addDays(daysNum) {
         const today = new Date();
         const tomorrow = new Date();
         tomorrow.setDate(today.getDate()+daysNum);
-        return this.getFormatDate(tomorrow);
+        return this._getFormatDate(tomorrow);
     }
 
     userIsAuth() {
@@ -224,8 +226,6 @@ export class Api {
     }
 
     saveCard() {
-
-
         const token = localStorage.getItem('token');
         fetch(`http://api.api-news.ga/articles`, {
             method: 'POST',
@@ -277,6 +277,5 @@ export class Api {
             })
         });
         
-
     }
 }

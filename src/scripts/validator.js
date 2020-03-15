@@ -11,14 +11,14 @@ export class Validator {
           }
         });
         if(form.classList.contains('reg-form')) {
-          this.setDisableButton(document.querySelector('.button__reg'), !isValid);
+          this._setDisableButton(document.querySelector('.button__reg'), !isValid);
         }
         if(form.classList.contains('login-form')) {
-          this.setDisableButton(document.querySelector('.button__login'), !isValid);
+          this._setDisableButton(document.querySelector('.button__login'), !isValid);
         }
     }
 
-    setDisableButton(button, isDisable) {
+    _setDisableButton(button, isDisable) {
         let buttonDisableClass = "";
         if(button.classList.contains('button__login')) {
           buttonDisableClass = "button__login_disabled";
@@ -37,14 +37,14 @@ export class Validator {
     }
 
     validateField(event) {
-        this.resetError(event.target);
+        this._resetError(event.target);
         Array.from(event.target).forEach((elem) => {
           if (document.querySelector(`#error-${elem.name}`)) {
-            this.resetError(elem);
+            this._resetError(elem);
           }
         });
 
-        const message = this.getErrorMessage(event.target);
+        const message = this._getErrorMessage(event.target);
 
         const errorElement = document.querySelector(`#error-${event.target.name}`);
         errorElement.textContent = message;  
@@ -58,12 +58,12 @@ export class Validator {
         
     }
 
-    resetError(element) {
+    _resetError(element) {
         const errorElement = document.querySelector(`#error-${element.name}`);
         errorElement.textContent = "";
     }
 
-    getErrorMessage(element) {
+    _getErrorMessage(element) {
         if(element.validity.valueMissing) { 
           return "Это обязательное поле";
         }

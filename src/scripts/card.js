@@ -31,7 +31,7 @@ export class Card {
 
         const date = document.createElement('div');
         date.classList.add('card__date');
-        date.textContent = this.formatPublishDate(this.publishDate);
+        date.textContent = this._formatPublishDate(this.publishDate);
         content.appendChild(date);
 
         const title = document.createElement('h4');
@@ -79,15 +79,15 @@ export class Card {
         return card;
     }
 
-    formatPublishDate(publishDate) {
+    _formatPublishDate(publishDate) {
         const date = new Date(publishDate);
         const day = date.getDate();
         const year = date.getFullYear();
-        const month = this.getMonthName(date.getMonth());
+        const month = this._getMonthName(date.getMonth());
         return `${day} ${month}, ${year}`;
     }
 
-    getMonthName(monthNum) {
+    _getMonthName(monthNum) {
         const months = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'];
         return months[monthNum];
     }
