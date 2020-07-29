@@ -1,0 +1,25 @@
+.card__source {
+    position: absolute;
+    bottom: 24px;
+    font-family: 'Robotoslab', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 320px) {
+    .card__source {
+        bottom: 16px;
+
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .card__source {
+        bottom: 16px;
+
+    }
+}

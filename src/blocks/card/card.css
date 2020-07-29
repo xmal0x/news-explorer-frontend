@@ -1,0 +1,41 @@
+@import url(./__date/card__date.css);
+@import url(./__favorite/card__favorite.css);
+@import url(./__image/card__image.css);
+@import url(./__source/card__source.css);
+@import url(./__text/card__text.css);
+@import url(./__title/card__title.css);
+@import url(./__content/card__content.css);
+@import url(./__saved/card__saved.css);
+@import url(./__img-container/card__img-container.css);
+
+.card {
+    width: 400px;
+    height: 576px;
+    background: #fff; 
+    border-radius: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: 100%;
+        height: 460px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .card {
+        width: 100%;
+        height: 550px;
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card {
+        width: 100%;
+        height: 440px;
+
+    }
+}

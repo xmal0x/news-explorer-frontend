@@ -1,0 +1,28 @@
+.main-content__saved__articles-count {
+    margin: 28px 0px 0px;
+    font-family: 'Robotoslab', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 46px;
+    color: #1A1B22;
+    width: 530px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content__saved__articles-count {
+        font-size: 30px;
+        line-height: 34px;
+        width: 336px;
+        margin-top: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-content__saved__articles-count {
+        font-size: 30px;
+        line-height: 34px;
+        width: 288px;
+        margin-top: 16px;
+    }
+}

@@ -1,0 +1,22 @@
+@import url(./__articles-count/main-content__saved__articles-count.css);
+@import url(./__description/main-content__saved__description.css);
+@import url(./__title/main-content__saved__title.css);
+
+.main-content__saved {
+    margin: 0px 104px;
+    max-height: 294px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content__saved {
+        margin: 0px 40px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-content__saved {
+        margin: 0px 16px;
+    }
+}
+
+

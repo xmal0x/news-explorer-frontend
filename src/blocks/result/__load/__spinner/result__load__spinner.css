@@ -1,0 +1,15 @@
+.result__load__spinner {
+	display: block;
+	width: 50px;
+	height: 50px;
+	border: 2px solid rgb(82, 82, 82);
+	border-bottom-color: #B6BCBF;
+	border-radius: 50%;
+	animation: spin .75s infinite linear;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

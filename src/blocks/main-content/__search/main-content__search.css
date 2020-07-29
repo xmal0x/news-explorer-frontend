@@ -1,0 +1,7 @@
+@import url(./__form/main-content__search__form.css);
+
+.main-content__search {
+    position: relative;
+    margin-top: 64px;
+    margin-bottom: 80px;
+}

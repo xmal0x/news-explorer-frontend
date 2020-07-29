@@ -1,0 +1,58 @@
+@import url(./_active/header__item_active.css);
+@import url(./__auth/header__item__auth.css);
+
+.header__item {
+    margin-right: 32px;
+    align-self: center;
+
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.header__item_black {
+    color: #000;
+}
+
+.header__item_auth {
+    margin-right: 10px; 
+}
+
+.header__item_not-active {
+    color: #B6BCBF;
+}
+
+
+@media screen and (max-width: 768px) {
+    .header__item {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .header__item {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 56px;
+        align-self: auto;
+    }
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .header__item {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 56px;
+        align-self: auto;
+    }
+}
+

@@ -1,0 +1,10 @@
+.result__not-found__text {
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+    width: 356px;
+    text-align: center;
+}

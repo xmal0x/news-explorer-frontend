@@ -1,0 +1,11 @@
+.header__item-border {
+    border: 1px solid #fff;
+    padding: 9px 16px;
+    border-radius: 100px;
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    cursor: url(../../../images/Pointer.png), pointer;
+}

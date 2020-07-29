@@ -1,0 +1,33 @@
+.main-content__title {
+    margin: 0px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 64px;
+    width:  608px;
+    font-family: 'Robotoslab', 'Arial', sans-serif;
+    margin-top: 80px;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content__title {
+        font-size: 36px;
+        line-height: 40px;
+        width: 385px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-content__title {
+        font-size: 36px;
+        line-height: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .main-content__title {
+        font-size: 36px;
+        line-height: 40px;
+    }
+}

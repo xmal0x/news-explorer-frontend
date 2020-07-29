@@ -1,0 +1,22 @@
+.popup__error {
+    font-family: 'Inter', 'Arial', 'sans-serif';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF0000;
+    margin-top: 3px;
+    opacity: 1;
+}
+
+.popup__error-reg {
+    align-self: center;
+    margin-top: 17px;
+    margin-bottom: -17px;
+}
+
+.popup__error-login {
+    align-self: center;
+    margin-top: 17px;
+    margin-bottom: -17px;
+}

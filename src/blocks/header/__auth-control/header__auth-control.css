@@ -1,0 +1,45 @@
+.header__auth-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+    padding: 13px 20px;
+    border-radius: 100px;
+    cursor: url(../../../images/Pointer.png), pointer;
+}
+
+.header__auth-control_black {
+    border: 1px solid #000;
+}
+
+@media screen and (max-width: 768px) {
+    .header__auth-control {
+        padding: 6px 14px;
+
+    }
+
+    .header__auth-control_black {
+        padding: 6px 14px;
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header__auth-control {
+        margin-top: 22px;
+        margin: auto;
+
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header__auth-control {
+        padding: 6px 106px;
+
+    }
+
+    .header__auth-control_black {
+        padding: 6px 106px;
+
+    }
+}
+

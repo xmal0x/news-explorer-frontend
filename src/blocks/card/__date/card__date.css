@@ -1,0 +1,22 @@
+.card__date {
+    font-family: 'Roboto reg', 'Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #B6BCBF;
+}
+
+@media screen and (max-width: 768px) {
+    .card__date {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card__date {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
